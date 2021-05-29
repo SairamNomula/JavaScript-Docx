@@ -22,9 +22,10 @@
             </div>
           </div>
         </div>
-    
+
         <div class="sidebar">
           <nav id="navbar">
+
             <header>
               <h1 class="js-doc-heading">JS Documentation</h1>
             </header>
@@ -41,7 +42,8 @@
               <li><a class="nav-link" href="#if...else_statement">if...else statement</a></li>    
               <li><a class="nav-link" href="#while_statement">while statement</a></li>
               <li><a class="nav-link" href="#Function_declarations">Function declarations</a></li>
-                
+              <li><a class="nav-link" href="#Loops">Loops</a></li>
+              <li><a class="nav-link" href="#Break_and_Continue">Break and Continue</a></li>
 
 
 
@@ -77,10 +79,6 @@
                             A general understanding of the Internet and the World Wide Web (WWW).
                           </li>
                           <li>Good working knowledge of HyperText Markup Language (HTML).</li>
-                          <li>
-                            Some programming experience. If you are new to programming, try one of
-                            the tutorials linked on the main page about JavaScript.
-                          </li>
                         </ul>
               </article>
           </section>
@@ -166,18 +164,24 @@
               <article>
                 You can declare a variable in three ways:
                 <p>
-                  With the keyword var. For example, <code>var x = 42.</code> This syntax
-                  can be used to declare both local and global variables.
+                  <code>let</code>,<code>const</code>,<code>var</code>
+                </p>
+                <p>Variable - For every iteration the value of the next property is assigned to the variable.</p>
+                <p>iterable - An object that has iterable properties.</p>
+                <p>
+                  Example using <code>var</code>, <code>var x = 42.</code> This syntax can be used to declare both 
+                  local and global variables.
+                </p>
+                <p>
+                  Example using <code>let</code>,<code> let y = 13.</code> This syntax
+                  can be used to declare a block scope local variable. See Variable scope
+                  below.
+                  Variables defined with <code>const</code> behave like <code>let</code> variables, except they cannot be reassigned.
                 </p>
                 <p>
                   By simply assigning it a value. For example, <code>x = 42.</code> This
                   always declares a global variable. It generates a strict JavaScript
                   warning. You shouldn't use this variant.
-                </p>
-                <p>
-                  With the keyword let. For example,<code> let y = 13.</code> This syntax
-                  can be used to declare a block scope local variable. See Variable scope
-                  below.
                 </p>
               </article>
             </section>
@@ -248,34 +252,29 @@
             <section class="main-section" id="Data_types">
               <header>Data types</header>
               <article>
-                <p>The latest ECMAScript standard defines seven data types:</p>
+                <p>There are eight basic data types in JavaScript. They are:</p>
                 <ul>
-                  <li>
-                    <p>Six data types that are primitives:</p>
-                    <ul>
-                      <li>Boolean. true and false.</li>
-                      <li>
-                        null. A special keyword denoting a null value. Because JavaScript
-                        is case-sensitive, null is not the same as Null, NULL, or any
-                        other variant.
-                      </li>
-                      <li>undefined. A top-level property whose value is undefined.</li>
-                      <li>Number. 42 or 3.14159.</li>
-                      <li>String. "Howdy"</li>
-                      <li>
-                        Symbol (new in ECMAScript 2015). A data type whose instances are
-                        unique and immutable.
-                      </li>
-                    </ul>
-                  </li>
-    
-                  <li>and Object</li>
+                      <li><code>String</code> represents textual data</li>
+                      <li><code>Number</code> an integer or a floating-point number.</li>
+                      <li><code>BigInt</code> an integer with arbitary precision.</li>
+                      <li><code>Boolean</code> Any of two values: true or false.</li>
+                      <li><code>undefined</code> a data type whose variable is not initialized.</li>
+                      <li><code>null</code>denotes a <code>null</code>value.</li>
+                      <li><code>Symbol</code> data type whose instances are unique and immutable.</li>
+                      <li><code>Object</code>key-value pairs of collection of data</li>
                 </ul>
+                Here, all data types except <code>Object</code> are primitive data types, 
+                whereas <code>Object</code> is non-primitive.
+                <p class="note-tip">
+                  <strong>Note: </strong>The <code>Object</code> data type (non-primitive type) can store 
+                  collections of data, whereas primitive data type can only store a single data.
+                </p>
                 Although these data types are a relatively small amount, they enable you
                 to perform useful functions with your applications. Objects and functions
                 are the other fundamental elements in the language. You can think of
-                objects as named containers for values, and functions as procedures that
+                objects as named containers for values, and functions as procedures that 
                 your application can perform.
+                
               </article>
             </section>
             <section class="main-section" id="if...else_statement">
@@ -397,6 +396,41 @@
                 </p>
               </article>
             </section>
+            <section class="main-section" id="Loops">
+              <header>Loops</header>
+              <article>
+                Loops are handy, if you want to run the same code over and over again, 
+                each time with a different value.
+                <ul>
+                  <li>JavaScript supports different kinds of loops:</li>
+                  <li>
+                  <code>for</code>-loops through a block of code a number of times.
+                  </li>
+                  <li>
+                  <code>for/in</code>-loops through the properties of an object.  
+                  </li>
+                  <li>
+                  <code>for/of</code>-loops through the values of an iterable object.  
+                  </li>
+                  <li>
+                  <code>while</code>-loops through a block of code while a specified condition is true.
+                  </li>
+                  <li>
+                  <code>do/while</code>-also loops through a block of code while a specified condition is true.  
+                  </li>
+              </ul>
+              </article>
+            </section>
+            <section class="main-section" id="Break and Continue">
+              <header>Break and Continue Statements</header>
+              <article>
+              <ul>
+                <li>The <code>break</code> statement "jumps out" of a loop.</li>
+                <li>The <code>continue</code> statement "jumps over" one iteration in the loop.</li>
+              </ul>
+            </article>
+            </section>
+
           </main>
         </div>
     
