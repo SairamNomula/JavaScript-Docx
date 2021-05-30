@@ -37,6 +37,7 @@
               <li><a class="nav-link" href="#Variables">Variables</a></li>
               <li><a class="nav-link" href="#Declaring_variables">Declaring variables</a></li>
               <li><a class="nav-link" href="#Variable_Scope">Variable Scope</a></li>
+              <li><a class="nav-link" href="#Hoisting_and_Recursion">Hoisting and Recursion</a></li>
               <li><a class="nav-link" href="#Constants">Constants</a></li>
               <li><a class="nav-link" href="#Data_types">Data types</a></li>
               <li><a class="nav-link" href="#if...else_statement">if...else statement</a></li>    
@@ -44,6 +45,8 @@
               <li><a class="nav-link" href="#Function_declarations">Function declarations</a></li>
               <li><a class="nav-link" href="#Loops">Loops</a></li>
               <li><a class="nav-link" href="#Break_and_Continue">Break and Continue</a></li>
+              <li><a class="nav-link" href="#JS_Errors">JS Errors</a></li>
+              <li><a class="nav-link" href="#JSON">JSON</a></li>
 
 
 
@@ -212,6 +215,46 @@
     
                 <code>if (true) { let y = 5; } console.log(y); // ReferenceError: y is not
                   defined</code>
+                  <p><i>JavaScript's global scope is like a public toilet. You can't avoid going in there, but try to limit your contact with surfaces when you do.
+                    ~Dmitry Baranovskiy</i></p>
+              </article>
+            </section>
+            <section class="main-section" id="Hoisting_and_Recursion">
+              <header>Hoisting and Recursion</header>
+              <article>
+                <p class="note-tip">
+                  <strong>Hoisting:</strong> Hoisting in JavaScript is a behavior 
+                    in which a function or a variable can be used before declaration.In hoisting, 
+                    though it seems that the declaration has moved up in the program, the actual thing 
+                    that happens is that the function and variable declarations are added to memory 
+                    during the compile phase.
+                </p>
+                <ul>
+                  <li>
+                    <u>Variable Hoisting</u>:
+                    In terms of variables and constants, keyword <code>var</code> is hoisted and <code>let</code> and <code>const</code> does not allow hoisting.
+                    In hoisting, the variable declaration is only accessible to the immediate scope.
+                  </li>
+                  <li>
+                    <u>Function Hoisting</u>:
+                    A function can be called before declaring it.However, when a function is used as an expression, 
+                    an error occurs because only declarations are hoisted.
+                  </li>
+                </ul>
+                <p class="note-tip">
+                  <strong>Note: </strong>Generally, hoisting is not performed in other programming languages like Python, C, C++, Java.
+                  Hoisting can cause undesirable outcomes in your program. And it is best to declare variables and functions first 
+                  before using them and avoid hoisting.
+                  In the case of variables, it is better to use <code>let</code> than <code>var</code>.
+                </p>
+                <p class="note-tip">
+                  <strong>Recursion: </strong>Recursion is a process of calling itself. A function that calls itself is called a recursive function.
+                  </p>
+                  <ul>
+                    <li>A recursive function must have a condition to stop calling itself. Otherwise, the function is called indefinitely.</li>
+                    <li>Once the condition is met, the function stops calling itself. This is called a base condition.</li>
+                    <li>To prevent infinite recursion, you can use if...else statement (or similar approach) where one branch makes the recursive call, and the other doesn't.</li>
+                  </ul>
               </article>
             </section>
             <section class="main-section" id="Constants">
@@ -421,7 +464,7 @@
               </ul>
               </article>
             </section>
-            <section class="main-section" id="Break and Continue">
+            <section class="main-section" id="Break_and_Continue">
               <header>Break and Continue Statements</header>
               <article>
               <ul>
@@ -430,6 +473,48 @@
               </ul>
             </article>
             </section>
+            <section class="main-section" id="Js_Errors">
+              <header>Js Errors</header>
+              <article>
+                <h4>Errors will happen!</h4>
+                <ul>
+                  <li><h4>Types of Errors:</h4></li>
+                  <li>In programming, there can be two types of errors in the code:</li>
+                  <li><u>Syntax Error</u>: Error in the syntax. For example, if you write consol.log('your result');, the above program throws a syntax error. The spelling of console is a mistake in the above code.</li>
+                  <li><u>Runtime Error</u>: This type of error occurs during the execution of the program. For example,
+                    calling an invalid function or a variable.</li>
+                  <li>
+                The <code>try</code>, <code>catch</code>, <code>throw</code> and <code>finally</code> blocks are used to handle exceptions (a type of an error). 
+                Before you learn about them, you need to know about the types of errors in programming.
+                 </li>
+                 <li>
+                  The <code>try</code> statement lets you test a block of code for errors.
+                 </li>
+                 <li>
+                  The <code>catch</code> statement lets you handle the error.
+                 </li>
+                 <li>
+                  The <code>throw</code> statement lets you create custom errors.
+                 </li>
+                 <li>
+                  The <code>finally</code> statement lets you execute code, after try and catch, regardless of the result.
+                 </li>
+            </ul></article> 
+          </section>
+            <section class="main-section" id="JSON">
+            <header>JSON</header>
+            <article>
+              <ul>
+                <li>JSON stands for <strong>J</strong>ava<strong>S</strong>cript <strong>O</strong>bject <strong>N</strong>otation</li>
+                <li>JSON is a format for storing and transporting data.</li>
+                <li>JSON is often used when data is sent from a server to a web page.</li>
+                <li>JSON is a lightweight data interchange format.</li>
+                <li>JSON is language independent.</li>
+                <li>JSON is "self-describing" and easy to understand.</li>
+                <li>The JSON syntax is derived from JavaScript object notation syntax, but the JSON format is text only. Code for reading and generating 
+                  JSON data can be written in any programming language.</li>
+              </ul>
+            </article></section>
 
           </main>
         </div>
