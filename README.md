@@ -1,3 +1,4 @@
 This is just a JavaScript Document which contains some information about JavaScript.
 I used HTML and CSS to create this documentation.
-![Screenshot (611)](https://user-images.githubusercontent.com/78247889/120096674-7b947680-c14a-11eb-931d-3527c27ca52c.png)
+![WhatsApp Image 2021-05-30 at 1 30 37 PM](https://user-images.githubusercontent.com/78247889/120096841-44729500-c14b-11eb-9788-ba66bb7348cf.jpeg)
+
