@@ -43,10 +43,17 @@
               <li><a class="nav-link" href="#if...else_statement">if...else statement</a></li>    
               <li><a class="nav-link" href="#while_statement">while statement</a></li>
               <li><a class="nav-link" href="#Function_declarations">Function declarations</a></li>
+              <li><a class="nav-link" href="#JS_Math">JS Math</a></li>
               <li><a class="nav-link" href="#Loops">Loops</a></li>
               <li><a class="nav-link" href="#Break_and_Continue">Break and Continue</a></li>
+              <li><a class="nav-link" href="#RegExp_Objecr">RegExp Object</a></li>
               <li><a class="nav-link" href="#JS_Errors">JS Errors</a></li>
               <li><a class="nav-link" href="#JSON">JSON</a></li>
+              <li><a class="nav-link" href="#Inheritance_and_the_prototype_chain">Inheritance and the prototype chain</li>
+              <li><a class="nav-link" href="#Strict_mode">Strict mode</a></li>
+              <li><a class="nav-link" href="#JavaScript_typed_arrays">JavaScript typed arrays</a></li>
+              <li><a class="nav-link" href="#Memory_management">Memory management</a></li>
+              <li><a class="nav-link" href="#Concurrency_model_and_Event_Loop">Concurrency model and Event Loop</a></li>
 
 
 
@@ -63,6 +70,15 @@
                       JavaScript is to program the behavior of web pages.
                       JavaScript is the world's most popular programming language.
                   </p>
+                  <ul>
+                    <li><strong>JavaScript (JS)</strong> is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions.
+                       While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, 
+                       such as Node.js, Apache CouchDB and Adobe Acrobat. </li>
+                       <li>JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, 
+                         imperative, and declarative (e.g. functional programming) styles.</li>
+                  </ul>
+                  <p>The standards for JavaScript are the  <a href="https://tc39.es/ecma262/">ECMAScript Language Specification (ECMA-262)</a> and the 
+                    <a href="https://tc39.es/ecma402/">ECMAScript Internationalization API specification (ECMA-402).</a></p>
               </article>
           </section>
           <section class="main-section" id=">What is the use of JS?">
@@ -116,6 +132,9 @@
                       you do not have to implement interfaces. Variables, parameters, and
                       function return types are not explicitly typed.
                     </p>
+
+                  <p>Both "Java" and "JavaScript" are trademarks or registered trademarks of Oracle in the U.S. 
+                    and other countries. However, the two programming languages have very different syntax, semantic, and use.</p>
               </article>
           </section>
           <section class="main-section" id="Hello_world!">
@@ -222,7 +241,7 @@
             <section class="main-section" id="Hoisting_and_Recursion">
               <header>Hoisting and Recursion</header>
               <article>
-                <p class="note-tip">
+                <p class="note note notecard">
                   <strong>Hoisting:</strong> Hoisting in JavaScript is a behavior 
                     in which a function or a variable can be used before declaration.In hoisting, 
                     though it seems that the declaration has moved up in the program, the actual thing 
@@ -241,13 +260,13 @@
                     an error occurs because only declarations are hoisted.
                   </li>
                 </ul>
-                <p class="note-tip">
+                <p class="note note notecard">
                   <strong>Note: </strong>Generally, hoisting is not performed in other programming languages like Python, C, C++, Java.
                   Hoisting can cause undesirable outcomes in your program. And it is best to declare variables and functions first 
                   before using them and avoid hoisting.
                   In the case of variables, it is better to use <code>let</code> than <code>var</code>.
                 </p>
-                <p class="note-tip">
+                <p class="note note notecard">
                   <strong>Recursion: </strong>Recursion is a process of calling itself. A function that calls itself is called a recursive function.
                   </p>
                   <ul>
@@ -308,7 +327,7 @@
                 </ul>
                 Here, all data types except <code>Object</code> are primitive data types, 
                 whereas <code>Object</code> is non-primitive.
-                <p class="note-tip">
+                <p class="note note notecard">
                   <strong>Note: </strong>The <code>Object</code> data type (non-primitive type) can store 
                   collections of data, whereas primitive data type can only store a single data.
                 </p>
@@ -359,6 +378,7 @@
                 <code>if ((x = y)) { /* statements here */ }</code>
               </article>
             </section>
+
             <section class="main-section" id="while_statement">
               <header>while statement</header>
               <article>
@@ -402,6 +422,7 @@
                 </p>
               </article>
             </section>
+
             <section class="main-section" id="Function_declarations">
               <header>Function declarations</header>
               <article>
@@ -439,6 +460,28 @@
                 </p>
               </article>
             </section>
+
+            <section class="main-section" id="#JS_Math">
+              <header>JS Math</header>
+              <article>
+                <code>Math</code> is a built-in object that has properties and methods for mathematical constants and functions. 
+                It’s not a function object.
+                Math works with the Number type. It doesn't work with BigInt.
+                <ul>
+                  <li>
+                    Unlike many other global objects, Math is not a constructor. All properties and methods of Math are static. 
+                    You refer to the constant pi as Math.PI and you call the sine function as Math.sin(x), where x is the method’s argument. 
+                    Constants are defined with the full precision of real numbers in JavaScript.
+                  </li>
+                  <p class="note notecard">
+                    <strong>Note: </strong>Many <code>Math</code> functions have a precision that’s implementation-dependent.
+                    This means that different browsers can give a different result. 
+                    Even the same JavaScript engine on a different OS or architecture can give different results!</p>
+                </ul>
+                <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math">click this to know more about JS Math.</a></p>
+              </article>
+            </section>
+
             <section class="main-section" id="Loops">
               <header>Loops</header>
               <article>
@@ -472,6 +515,22 @@
                 <li>The <code>continue</code> statement "jumps over" one iteration in the loop.</li>
               </ul>
             </article>
+            </section>
+
+            <section class="main-section" id="RegExp_Object">
+              <header>Regular Expression Object</header>
+              <article>
+                <ul>
+                  <li>A regular expression is a sequence of characters that forms a search pattern.</li>
+                  <li>The search pattern can be used for text search and text replace operations.</li>
+                  <li>Regular expressions can be used to perform all types of text search and text replace operations.</li>
+                  <li><strong>Syntax:</strong><code> /pattern/modifiers;</code></li>
+                  <li>Example:</li>
+                  <li><code>var</code> patt = /sairamnomula/i;</li>
+                  <li>Here, <strong>/sairamnomula/i</strong> is a regular expression. <strong>sairamnomula</strong> is a pattern (to be used in a search).
+                    <strong>i</strong> is a modifier (modifies the search to be case-insensitive).</li>
+                </ul>
+              </article>
             </section>
             <section class="main-section" id="Js_Errors">
               <header>Js Errors</header>
@@ -515,6 +574,38 @@
                   JSON data can be written in any programming language.</li>
               </ul>
             </article></section>
+            <section class="main-section" id="#Inheritance_and_the_prototype_chain">
+              <header>Inheritance and the prototype chain</header>
+              <article>
+                <ul>
+                  <li>
+                    JavaScript is a bit confusing for developers experienced in class-based languages (like Java or C++), 
+                    as it is dynamic and does not provide a <code>class</code> implementation.
+                  </li>
+                  <li>
+                    When it comes to inheritance, JavaScript only has one construct: objects. Each object has a private property which holds 
+                    a link to another object called its prototype. That prototype object has a prototype of its own, and so on until an object 
+                    is reached with <code>null</code> as its prototype. By definition, <code>null</code> has no prototype, and acts as the final link in this prototype chain.
+                  </li>
+                  <li><h3>Inheritance with the prototype chain</h3></li>
+                  <li><strong><u>Inherting properties</u>:</strong></li>
+                  <li>JavaScript objects are dynamic "bags" of properties (referred to as own properties). JavaScript objects have a link to a prototype object. 
+                    When trying to access a property of an object, the property will not only be sought on the object but on the prototype of the object, 
+                    the prototype of the prototype, and so on until either a property with a matching name is found or the end of the prototype chain is reached.
+                  </li>
+                  <p class="note notecard">
+                    <strong>Note:</strong>Following the ECMAScript standard, the notation <code>someObject.[[Prototype]]</code> is used to designate the prototype of <code>someObject</code>. 
+                    Since ECMAScript 2015, the <code>[[Prototype]]</code> is accessed using the accessors <code>Object.getPrototypeOf()</code> and <code>Object.setPrototypeOf()</code>. 
+                    This is equivalent to the JavaScript property <code>__proto__</code> which is non-standard but de-facto implemented by many browsers.
+                    It should not be confused with the <code>func.prototype</code> property of functions, which instead specifies the <code>[[Prototype]]</code> to be assigned to all instances 
+                    of objects created by the given function when used as a constructor. The Object.prototype property represents the Object prototype object.</p>
+                    <p>
+                      Setting a property to an object creates an own property. The only exception to the getting and setting behavior rules is when there is an inherited property with a 
+                      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters">getter or a setter.</a>
+                    </p>
+                </ul>
+              </article>
+            </section>
 
           </main>
         </div>
