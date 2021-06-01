@@ -2,5 +2,4 @@ This is just a JavaScript Document which contains some information about JavaScr
 I used HTML and CSS to create this documentation.
 
 Screenshot Reference:
-![WhatsApp Image 2021-05-30 at 1 30 37 PM](https://user-images.githubusercontent.com/78247889/120096841-44729500-c14b-11eb-9788-ba66bb7348cf.jpeg)
-
+![image](https://user-images.githubusercontent.com/78247889/120292061-92b99c80-c2e1-11eb-8d26-b88d16f9680d.png)
