@@ -78,16 +78,16 @@
                        <li>JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, 
                          imperative, and declarative (e.g. functional programming) styles.</li>
                   </ul>
-                  <p>The standards for JavaScript are the  <a href="https://tc39.es/ecma262/">ECMAScript Language Specification (ECMA-262)</a> and the 
-                    <a href="https://tc39.es/ecma402/">ECMAScript Internationalization API specification (ECMA-402).</a></p>
+                  <p>The standards for JavaScript are the  <a href="https://tc39.es/ecma262/" target="_blank">ECMAScript Language Specification (ECMA-262)</a> and the 
+                    <a href="https://tc39.es/ecma402/" target="_blank">ECMAScript Internationalization API specification (ECMA-402).</a></p>
               </article>
           </section>
 
           <section class="main-section" id="Prerequisites">
             <header>Prerequisites</header>
             <article>
-                <p>Basic computer literacy, a basic understanding of <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">HTML</a> and 
-                  <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">CSS</a>.</p>
+                <p>Basic computer literacy, a basic understanding of <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML" target="_blank">HTML</a> and 
+                  <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS" target="_blank">CSS</a>.</p>
             </article>
         </section>
 
@@ -117,8 +117,8 @@
                 <li>Here we are actually looking at some code, and while doing so, 
                   explore what actually happens when you run some JavaScript in your page.</li>
                   <li>
-                    When you load a web page in your browser, you are running your code (the <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">HTML</a>, 
-                    <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">CSS</a>, and JavaScript) 
+                    When you load a web page in your browser, you are running your code (the <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML" target="_blank">HTML</a>, 
+                    <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS" target="_blank">CSS</a>, and JavaScript) 
                     inside an execution environment (the browser tab). This is like a factory that takes in raw materials 
                     (the code) and outputs a product (the web page).A very common use of JavaScript is to dynamically modify HTML and CSS to update a user interface, 
                     via the Document Object Model API.
@@ -292,7 +292,7 @@
                   before using them and avoid hoisting.
                   In the case of variables, it is better to use <code>let</code> than <code>var</code>.
                 </p>
-                <p class="note note notecard">
+                <p>
                   <strong>Recursion: </strong>Recursion is a process of calling itself. A function that calls itself is called a recursive function.
                   </p>
                   <ul>
@@ -504,7 +504,7 @@
                     This means that different browsers can give a different result. 
                     Even the same JavaScript engine on a different OS or architecture can give different results!</p>
                 </ul>
-                <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math">click this to know more about JS Math.</a></p>
+                <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math" target="_blank">click this to know more about JS Math.</a></p>
               </article>
             </section>
 
@@ -512,8 +512,12 @@
               <header>Loops</header>
               <article>
                 Loops are handy, if you want to run the same code over and over again, 
-                each time with a different value.
+                each time with a different value.<strong> Loops are all to do with doing the same thing over and over again</strong>, 
+                which is great for <strong>rapidly completing repetitive tasks</strong>.They generally have one or more following features:
                 <ul>
+                  <li>A <strong>counter</strong>, which is initialized with a certain value — this is the starting point of the loop.</li>
+                  <li>A <strong>condition</strong>, which is a true/false test to determine whether the loop continues to run, or stops — usually when the counter reaches a certain value.</li>
+                  <li>An <strong>iterator</strong>, which increments the counter by a small amount on each successive loop until the condition is no longer <code>true</code>.</li>
                   <li>JavaScript supports different kinds of loops:</li>
                   <li>
                   <code>for</code>-loops through a block of code a number of times.
@@ -537,8 +541,8 @@
               <header>Break and Continue Statements</header>
               <article>
               <ul>
-                <li>The <code>break</code> statement "jumps out" of a loop.</li>
-                <li>The <code>continue</code> statement "jumps over" one iteration in the loop.</li>
+                <li>The <code>break</code> statement "<i>jumps out</i>" of a loop.</li>
+                <li>The <code>continue</code> statement "<i>jumps over</i>" one iteration in the loop.</li>
               </ul>
             </article>
             </section>
@@ -600,7 +604,7 @@
                   JSON data can be written in any programming language.</li>
               </ul>
             </article></section>
-            <section class="main-section" id="#Inheritance_and_the_prototype_chain">
+            <section class="main-section" id="Inheritance_and_the_prototype_chain">
               <header>Inheritance and the prototype chain</header>
               <article>
                 <ul>
@@ -611,7 +615,8 @@
                   <li>
                     When it comes to inheritance, JavaScript only has one construct: objects. Each object has a private property which holds 
                     a link to another object called its prototype. That prototype object has a prototype of its own, and so on until an object 
-                    is reached with <code>null</code> as its prototype. By definition, <code>null</code> has no prototype, and acts as the final link in this prototype chain.
+                    is reached with <code>null</code> as its prototype. By definition, <code>null</code> has no prototype, and acts 
+                    as the final link in this prototype chain.
                   </li>
                   <li><h3>Inheritance with the prototype chain</h3></li>
                   <li><strong><u>Inherting properties</u>:</strong></li>
@@ -627,12 +632,157 @@
                     of objects created by the given function when used as a constructor. The Object.prototype property represents the Object prototype object.</p>
                     <p>
                       Setting a property to an object creates an own property. The only exception to the getting and setting behavior rules is when there is an inherited property with a 
-                      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters">getter or a setter.</a>
+                      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters" target="_blank">getter or a setter.</a>
                     </p>
                 </ul>
               </article>
             </section>
 
+            <section class="main-section" Id="Strict_mode">
+              <header>Strict mode</header>
+              <article>
+                  <p>
+                    Strict mode isn't just a subset: it intentionally has different semantics from normal code. 
+                    Browsers not supporting strict mode will run strict mode code with different behavior from browsers that do, 
+                    so don't rely on strict mode without feature-testing for support for the relevant aspects of strict mode.
+                  </p>
+                  <ul>
+                    <li>Strict mode makes several changes to normal JavaScript semantics:</li>
+                    <li>1) Eliminates some JavaScript silent errors by changing them to throw errors.</li>
+                    <li>2) Fixes mistakes that make it difficult for JavaScript engines to perform optimizations: 
+                      strict mode code can sometimes be made to run faster than identical code that's not strict mode.</li>
+                    <li>3) Prohibits some syntax likely to be defined in future versions of ECMAScript.</li>
+                    <li><h4>Invoking Strict Mode:</h4></li>
+                    <li>Strict mode applies to entire scripts or to individual functions. 
+                      It doesn't apply to block statements enclosed in <code>{}</code> braces; attempting to apply it to such contexts does nothing. 
+                      <code>eval</code> code, <code>Function</code> code, event handler attributes, strings passed to <code>WindowTimers.setTimeout()</code>, 
+                      and related functions are entire scripts, and invoking strict mode in them works as expected.</li>
+                      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode" target="_blank">Know more about Strict mode</a></li>
+                      <p class="note notecard">
+                        <strong>Note:</strong> Sometimes you'll see the default, non-strict mode referred to as "sloppy mode". This isn't an official term, but be aware of it, just in case.
+                      </p>
+                </ul>
+              </article>
+            </section>
+
+            <section class="main-section" Id="JavaScript_typed_arrays">
+              <header>JavaScript typed arrays</header>
+              <article>
+                <p>JavaScript typed arrays are array-like objects that provide a mechanism for reading and writing raw binary data in memory buffers.
+                  This feature is well supported across all major browsers and with ES6, they were integrated into the core JS framework and received 
+                  access to <code>Array</code> methods such as <code>map()</code>, <code>filter()</code>, etc.</p>
+                <ul>
+                  <li><strong>Structure:</strong> Typed Arrays are implemented in such a way that they are structured as two main components. 
+                    The two components that work hand-in-hand to implement typed arrays are the Buffer and View.</li>
+                  <li><strong>Buffer:</strong> A Buffer is an object that is of type <code>ArrayBuffer</code> which represents a chunk of data. 
+                    This chunk of raw binary data, cannot be accessed or modified on its own. You might wonder, what is the use of a data 
+                    object which cannot be accessed or modified. Here is where a View comes into the picture.</li>
+                  <li><strong>View:</strong> A View is an object that allows you to access and modify the raw binary content stored in an ArrayBuffer.</li>
+                  <li>There are two kinds of Views:</li>
+                  <li><strong><u>An instance of the <code>TypedArray</code> object</u>:</strong> These types of objects are much similar to the usual Arrays, 
+                    but only store numerical data of a single type. Types like Int8, Uint8, Int16, Float32 are some of the TypedArray types. 
+                    The number in the type denotes the number of bits allocated for the data type.</li>
+                    <li><strong><u>An instance of the <code>DataView</code> object</u>:</strong> The <code>DataView</code> is a low-level interface that provides a getter/setter 
+                      API to read and write arbitrary data to the buffer. This helps you immensely, especially when working with multiple data types in a single <code>TypedArray</code>.</li>
+                      <li>Another advantage of using the <code>DataView</code> is that it lets you control the Endianness of your data. <code>Typed Array</code> use the Endianness of your platform. 
+                        This will not be an issue if you are working locally, as your device will use the same Endianness as your typed array. In most scenarios, your typed array will be little-endian as Intel uses little-endian. 
+                        Since Intel is very common amongst computer processors, there will not be an issue most of the time. But if you are transferring a little-endian encoded data to a device that uses big-endian encoding, 
+                        you will end up with poorly encoded that will probably end up being corrupted. As <code>DataView</code> enables you to control the Endianness, you can use it whenever necessary.</li>
+                  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays" target="_blank">Know more about Typed Arrays.</a></li>
+                </ul>
+              </article>
+            </section>
+            <section class="main-section" Id="Memory_management">
+              <header>Memory Management</header>
+              <article>
+                <p>Low-level languages like C, have manual memory management primitives such as <a href="https://www.geeksforgeeks.org/dynamic-memory-allocation-in-c-using-malloc-calloc-free-and-realloc/" target="_blank">malloc() and free().</a>
+                  In contrast, JavaScript automatically allocates memory when objects are created and frees it when they are not used anymore (garbage collection).</p>
+                <ul><li>At the same time, JavaScript allocates memory when things (objects, strings, etc.) are created and “automatically” frees it up when they are not used anymore, 
+                  a process called garbage collection.This seemingly “automatical” nature of freeing up resources is a source of confusion and gives JavaScript (and other high-level-language) developers the false impression 
+                  they can choose not to care about memory management. This is a big mistake.</li>
+                  <li>Even when working with high-level languages, developers should have an understanding of memory management (or at least the basics). Sometimes there are issues with the automatic memory management 
+                    (such as bugs or implementation limitations in the garbage collectors, etc.) which developers have to understand in order to handle them properly (or to find a proper workaround, with a minimum trade off and code debt).</li>
+                    <li>No matter what language you are using, memory life cycle is pretty much always the same.(Allocate -> Use -> Release)</li>
+                    <li><strong>Allocate memory--</strong>memory is allocated by the operating system which allows your program to use it.</li>
+                    <li>In low-level languages (e.g. C) this is an explicit operation that you as a developer should handle.</li>
+                    <li>In high-level languages, however, this is taken care of for you.</li>
+                    <li><strong>Use memory--</strong>this is the time when your program actually makes use of the previously allocated memory. <strong>Read</strong> and <strong>Write</strong> operations are taking place as you’re using the allocated variables in your code.</li>
+                    <li><strong>Release memory--</strong>ow is the time to release the entire memory that you don’t need so that it can become free and available again. As with the Allocate memory operation, this one is explicit in low-level languages.</li>
+                    <!-- <img src="https://miro.medium.com/max/30/1*qY-yRQWGI-DLS3zRHYHm9A.png?q=20" width="1024" height="430" role="presentation"> -->
+                    <li><h4>Allocation in JavaScript:</h4><u>Value initialization</u>: JavaScript relieves developers from the responsibility to handle memory allocations — JavaScript does it by itself, alongside declaring values.</li>
+                    <!--<div class="code-example">
+                    <pre class="brush: js notranslate">
+                      <code><span class="token keyword">var</span> x 
+                      <span class="token operator">=</span> 
+                      <span class="token punctuation">{</span>
+                      a
+                      <span class="token operator">:</span> 
+                      <span class="token punctuation">{</span>
+                      b<span class="token operator">:</span> <span class="token number">2</span>
+                      <span class="token punctuation">}</span>
+                      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+                      <span class="token comment">// 2 objects are created. One is referenced by the other as one of its properties.</span>
+                      <span class="token comment">// The other is referenced by virtue of being assigned to the 'x' variable.</span>
+                      <span class="token comment">// Obviously, none can be garbage-collected.</span>
+                      <span class="token keyword">var</span> y <span class="token operator">=</span> x
+                      <span class="token punctuation">;</span>      
+                      <span class="token comment">// The 'y' variable is the second thing that has a reference to the object.</span>
+                      x <span class="token operator">=</span> 
+                      <span class="token number">1</span>
+                      <span class="token punctuation">;</span>          
+                      <span class="token comment">// Now, the object that was originally in 'x' has a unique reference</span>
+                      <span class="token comment">//   embodied by the 'y' variable.</span>
+                      <span class="token keyword">var</span> z <span class="token operator">=</span> y<span class="token punctuation">.</span>a<span class="token punctuation">;</span>    <span class="token comment">// Reference to 'a' property of the object.</span>
+                      <span class="token comment">//   This object now has 2 references: one as a property,</span>
+                      <span class="token comment">//   the other as the 'z' variable.</span>
+                      y 
+                      <span class="token operator">=</span> 
+                      <span class="token string">'mozilla'</span><span class="token punctuation">;</span>  
+                      <span class="token comment">// The object that was originally in 'x' has now zero</span>
+                      <span class="token comment">//   references to it. It can be garbage-collected.</span>
+                      <span class="token comment">//   However its 'a' property is still referenced by</span>
+                      <span class="token comment">//   the 'z' variable, so it cannot be freed.</span>
+                      z 
+                      <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>       
+                      <span class="token comment">// The 'a' property of the object originally in x</span>
+                      <span class="token comment">//   has zero references to it. It can be garbage collected.</span>
+                      </code></pre>
+                    </div>-->
+                    <li><u>Allocation via function cells</u>: Some function calls result in object allocation and Some methods allocate new values or objects.</li>
+                    <li><strong>Using memory in JavaScript</strong>: Using the allocated memory in JavaScript basically, means reading and writing in it.
+                      This can be done by reading or writing the value of a variable or an object property or even passing an argument to a function.
+                      Release when the memory is not needed anymore.The hardest task here is to figure out when the allocated memory is not needed any longer. 
+                      It often requires the developer to determine where in the program such piece of memory is not needed anymore and free it.High-level languages 
+                      embed a piece of software called garbage collector which job is to track memory allocation and use in order to find when a piece of allocated 
+                      memory is not needed any longer in which case, it will automatically free it.</li>
+                      <li>Most garbage collectors work by collecting memory which can no longer be accessed, e.g. all variables pointing to it went out of scope. 
+                        That’s, however, an under-approximation of the set of memory spaces that can be collected, because at any point a memory location may still 
+                        have a variable pointing to it in scope, yet it will never be accessed again.</li>
+                        <li><h3>Garbage collection:</h3>Due to the fact that finding whether some memory is “not needed anymore” is undecidable, garbage collections 
+                          implement a restriction of a solution to the general problem.</li>
+                          <li><h4>Reference:</h4>The main concept that garbage collection algorithms rely on is the concept of reference. Within the context of memory management, 
+                            an object is said to reference another object if the former has access to the latter (either implicitly or explicitly). For instance, a JavaScript 
+                            object has a reference to its <a href="#Inheritance_and_the_prototype_chain">prototype</a> (implicit reference) and to its properties values (explicit reference).
+                            In this context, the notion of an "object" is extended to something broader than regular JavaScript objects and also contain function scopes (or the global lexical scope).</li>
+                            <li><h4>Reference-counting garbage collection:</h4>This is the most naive garbage collection algorithm. This algorithm reduces the problem from determining whether or not an object 
+                              is still needed to determining if an object still has any other objects referencing it. An object is said to be "garbage", or collectible if there are zero references pointing to it.</li>
+                              <li><h4>Limitation-Circular references:</h4>There is a limitation when it comes to circular references. In the following example, two objects are created with properties that reference 
+                                one another, thus creating a cycle. They will go out of scope after the function call has completed. At that point they become unneeded and their allocated memory should be reclaimed. 
+                                However, the reference-counting algorithm will not consider them reclaimable since each of the two objects has at least one reference pointing to them, resulting in neither of them 
+                                being marked for garbage collection. Circular references are a common cause of memory leaks.</li>
+                                <li><h4>Mark-and-sweep algorithm:</h4> In order to decide whether an object is needed, this algorithm determines whether the object is reachable.</li>
+                                <li><a href="https://www.geeksforgeeks.org/mark-and-sweep-garbage-collection-algorithm/">know more about it!</a></li>
+                                <li><h4>Counter intuitive behavior of Garbage Collectors</h4>You can’t really tell when a collection will be performed. This means that in some cases 
+                                  programs use more memory that it’s actually required. In other cases, short-pauses may be noticeable in particularly sensitive applications. 
+                                  Although non-determinism means one cannot be certain when a collection will be performed, most GC implementations share the common pattern of 
+                                  doing collection passes during allocation. If no allocations are performed, most GCs stay idle.</li>
+                </ul>
+              </article>
+            </section>
+            <section class="main-section" Id="Concurrency_model_and_Event_Loop">
+              <header>Concurrency model and Event Loop</header>
+              <p>coming soon...</p>
+            </section>
           </main>
         </div>
     
