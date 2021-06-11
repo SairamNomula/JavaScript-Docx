@@ -781,7 +781,44 @@
             </section>
             <section class="main-section" Id="Concurrency_model_and_Event_Loop">
               <header>Concurrency model and Event Loop</header>
-              <p>coming soon...</p>
+              <article>
+              <p>Javascript runtime is single threaded which means that it can execute one piece of code at a time.
+                JavaScript has a concurrency model based on an event loop, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks. 
+                This model is quite different from models in other languages like C and Java.The following sections explain a theoretical model. Modern JavaScript engines implement and heavily optimize the described semantics.
+              </p>
+              <ul>
+                <li><strong>Call Stack:</strong> A call stack is a simple data structure that records where in the code we are currently. So if we step into a function that is a function invocation it is pushed to the call stack. 
+                  When we return from a function it is popped out of the stack.</li>
+                  <li><strong>Browser:</strong> Now we know from this that Javascript can execute one thing at a time but that’s not the case with the Browser. The Browser has its own set of APIs like setTimeout and XMLHttpRequests 
+                    which are not specified in the Javascript runtime.In fact if you look through the source code of V8, the popular Javascript runtime that powers browsers like Google Chrome, you won’t find any definitions for it. 
+                    That's because these special web API’s exist in the browser environment not inside the javascript environment. So you can say that these APIs introduce concurrency into the mix.</li>
+                    <li><strong>Heap:</strong> It’s mostly the place where objects are allocated.</li>
+                    <li><strong>Call back Queue:</strong> It’s a data structure that stores all the callbacks. Since it’s a queue, the elements are processed based on First in First Out(FIFO).At some point during the event loop, 
+                      the runtime starts handling the messages on the queue, starting with the oldest one. To do so, the message is removed from the queue and its corresponding function is called with the message as an input parameter. 
+                      As always, calling a function creates a new stack frame for that function's use.The processing of functions continues until the stack is once again empty. Then, the event loop will process the next message in 
+                      the queue (if there is one).</li>
+                      <li><strong>Event loop:</strong> The main function of event loop is to check the program stack and find if it is empty. If the stack is empty, then it checks the callback queue. If the callback queue is not empty 
+                        then it pushes the code block from callback queue to main stack and executes it sequentially.</li>
+                        <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--me_OQkyK--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/vtk5e1vsf0k09jl8ns7n.png" height="500" width="600" alt="Alt Text" loading="lazy">
+                        <!--<img src="Eventloop.png" height="500" width="600" alt="Alt Text" loading="lazy">-->
+                        <li style="color:red;">Hey stop! I heard someone yelling what the heck is this!? Okay, let's watch a video! <a href="https://www.youtube.com/watch?v=8aGhZQkoFbQ&t=1s" target="_blank">Click here!</a></li>
+                        <p>Now lets try to understand what is happening when the above program is getting executed.</p>
+                        <ol>
+                          <li>1. The program execution starts. Since Javascript is single threaded only 1 line can be executed at a time.</li>
+                          <li>2. So, First line of code is pushed onto stack.</li>
+                          <li>3. The console.log is executed printing "Hello". So this line is now popped out of stack.</li>
+                          <li>4. Now next line to be executed is setTimeout and it gets pushed onto stack. Now the javascript runtime can only execute single statement but the browser comes with a whole lot of other things which are web apis. 
+                            This is when concurrency comes into picture. Now on the execution of setTimeout, a call to setTimeout api is made and the setTimeout is now popped of from stack.</li>
+                          <li>5. The third statement is pushed onto stack and then executed. This prints "Bye" as output.</li>
+                          <li>6. Now when the setTimeout api ( and all other apis ) are completed, the callback is pushed into callback queue simultaneously. These apis cannot interact directly with the stack.</li>
+                          <li>7. Now is the time when event loop comes into picture. Event loops jobs is to monitor call stack and task queue. If the call stack is empty, it has to take the first thing from the callback queue and push 
+                            it onto the stack. So now callback from the timeout is pushed onto the stack which then gets executed and prints "Hello inside setTimeout".</li>
+                        </ol>
+                        <p class="note notecard"> To visualize this better try this tool by Phillip Roberts:<a href="http://latentflip.com/loupe/?code=!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D" target="_blank">Loupe Event Loop Visualizer</a></p>
+                        <li><a href="https://html.spec.whatwg.org/multipage/webappapis.html#event-loops" target="_blank">Know about Event loops in the HTML standard</a></li>
+                        <li><a href="https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/#what-is-the-event-loop" target="_blank">Know about Node.js Event Loop</a></li>
+              </ul>
+              </article>
             </section>
           </main>
         </div>
