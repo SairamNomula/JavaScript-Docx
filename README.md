@@ -1,5 +1,4 @@
-This is just a Document which contains some information about JavaScript.
-I used HTML and CSS to create this documentation.
+https://sairamnomula.github.io/JavaScript-Docx/
 
 Screenshot Reference:
 
