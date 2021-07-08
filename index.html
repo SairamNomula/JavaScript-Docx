@@ -8,7 +8,7 @@
 </head>
 <body>
     
-    <div class="container">
+    <div class="container default">
 
         <div class="header">
           <div class="header-nav">
@@ -16,9 +16,24 @@
               <img class='logo' src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="Javascript logo"/>
             </div>
             <div class="right-div">
-                <ul>
-                    <li class=""><button class="d-btn">Made by Sairam Nomula</button></li>
-                </ul>
+              <button id="toggle-theme">Dark</button>
+              <!-- <div class="darkmode-switch">
+                <span>LIGHT</span>
+                <label class="switch">
+                  <input type="checkbox" name="toggle-darkmode">
+                  <div>
+                    ::before
+                  </div>
+                </label>
+                <span>DARK</span>
+              </div> -->
+
+
+                <!-- <ul>
+                    <li class="">
+                      <button class="d-btn">Made by Sairam Nomula</button>
+                    </li>
+                </ul> -->
             </div>
           </div>
         </div>
@@ -37,7 +52,7 @@
               <li><a class="nav-link" href="#Java_and_JavaScript">Java and JavaScript</a></li>
               <li><a class="nav-link" href="#Variables">Variables</a></li>
               <li><a class="nav-link" href="#Declaring_variables">Declaring variables</a></li>
-              <li><a class="nav-link" href="#Variable_Scope">Variable Scope</a></li>
+              <li><a class="nav-link" href="#Variable_scope">Variable Scope</a></li>
               <li><a class="nav-link" href="#Hoisting_and_Recursion">Hoisting and Recursion</a></li>
               <li><a class="nav-link" href="#Constants">Constants</a></li>
               <li><a class="nav-link" href="#Data_types">Data types</a></li>
@@ -47,7 +62,7 @@
               <li><a class="nav-link" href="#JS_Math">JS Math</a></li>
               <li><a class="nav-link" href="#Loops">Loops</a></li>
               <li><a class="nav-link" href="#Break_and_Continue">Break and Continue</a></li>
-              <li><a class="nav-link" href="#RegExp_Objecr">RegExp Object</a></li>
+              <li><a class="nav-link" href="#RegExp_Object">RegExp Object</a></li>
               <li><a class="nav-link" href="#JS_Errors">JS Errors</a></li>
               <li><a class="nav-link" href="#JSON">JSON</a></li>
               <li><a class="nav-link" href="#Inheritance_and_the_prototype_chain">Inheritance and the prototype chain</li>
@@ -884,5 +899,909 @@
         </div>
     
       </div>Made by Sairam Nomula
+      <script src="index.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>JS Document</title>
+</head>
+<body>
+    
+    <div class="container default">
+
+        <div class="header">
+          <div class="header-nav">
+            <div class="left-div">
+              <img class='logo' src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="Javascript logo"/>
+            </div>
+            <div class="right-div">
+              <button id="toggle-theme">Dark</button>
+              <!-- <div class="darkmode-switch">
+                <span>LIGHT</span>
+                <label class="switch">
+                  <input type="checkbox" name="toggle-darkmode">
+                  <div>
+                    ::before
+                  </div>
+                </label>
+                <span>DARK</span>
+              </div> -->
+
+
+                <!-- <ul>
+                    <li class="">
+                      <button class="d-btn">Made by Sairam Nomula</button>
+                    </li>
+                </ul> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar">
+          <nav id="navbar">
+
+            <header>
+              <h1 class="js-doc-heading">JS Documentation</h1>
+            </header>
+            <ul>
+              <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+              <li><a class="nav-link" href="#Prerequisites">Prerequisites</a></li>
+              <li><a class="nav-link" href="#What_JS_can_do?">What JS can do?</a></li>
+              <li><a class="nav-link" href="#Is_JS_on_your_page!?">Is JS on your page!?</a></li>
+              <li><a class="nav-link" href="#Java_and_JavaScript">Java and JavaScript</a></li>
+              <li><a class="nav-link" href="#Variables">Variables</a></li>
+              <li><a class="nav-link" href="#Declaring_variables">Declaring variables</a></li>
+              <li><a class="nav-link" href="#Variable_scope">Variable Scope</a></li>
+              <li><a class="nav-link" href="#Hoisting_and_Recursion">Hoisting and Recursion</a></li>
+              <li><a class="nav-link" href="#Constants">Constants</a></li>
+              <li><a class="nav-link" href="#Data_types">Data types</a></li>
+              <li><a class="nav-link" href="#if...else_statement">if...else statement</a></li>    
+              <li><a class="nav-link" href="#while_statement">while statement</a></li>
+              <li><a class="nav-link" href="#Function_declarations">Function declarations</a></li>
+              <li><a class="nav-link" href="#JS_Math">JS Math</a></li>
+              <li><a class="nav-link" href="#Loops">Loops</a></li>
+              <li><a class="nav-link" href="#Break_and_Continue">Break and Continue</a></li>
+              <li><a class="nav-link" href="#RegExp_Object">RegExp Object</a></li>
+              <li><a class="nav-link" href="#JS_Errors">JS Errors</a></li>
+              <li><a class="nav-link" href="#JSON">JSON</a></li>
+              <li><a class="nav-link" href="#Inheritance_and_the_prototype_chain">Inheritance and the prototype chain</li>
+              <li><a class="nav-link" href="#Strict_mode">Strict mode</a></li>
+              <li><a class="nav-link" href="#JavaScript_typed_arrays">JavaScript typed arrays</a></li>
+              <li><a class="nav-link" href="#Memory_management">Memory management</a></li>
+              <li><a class="nav-link" href="#Concurrency_model_and_Event_Loop">Concurrency model and Event Loop</a></li>
+              <li><a class="nav-link" href="#Commonly_asked_JavaScript_Interview_Questions">Interview Questions</a></li>
+
+
+          </ul>
+          </nav>
+        </div>
+    
+        <div class="main-content" main id="main-doc">
+              <section class="main-section" id="Introduction">
+              <header>Introduction</header>
+              <article>
+                  <p>
+                      HTML is to define the content of web pages, where CSS is to specify the layout of web pages and 
+                      JavaScript is to program the behavior of web pages.
+                      JavaScript is the world's most popular programming language.
+                  </p>
+                  <ul>
+                    <li><strong>JavaScript (JS)</strong> is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions.
+                       While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, 
+                       such as Node.js, Apache CouchDB and Adobe Acrobat. </li>
+                       <li>JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, 
+                         imperative, and declarative (e.g. functional programming) styles.</li>
+                  </ul>
+                  <p>The standards for JavaScript are the  <a href="https://tc39.es/ecma262/" target="_blank">ECMAScript Language Specification (ECMA-262)</a> and the 
+                    <a href="https://tc39.es/ecma402/" target="_blank">ECMAScript Internationalization API specification (ECMA-402).</a></p>
+              </article>
+          </section>
+
+          <section class="main-section" id="Prerequisites">
+            <header>Prerequisites</header>
+            <article>
+                <p>Basic computer literacy, a basic understanding of <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML" target="_blank">HTML</a> and 
+                  <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS" target="_blank">CSS</a>.</p>
+            </article>
+        </section>
+
+          <section class="main-section" id="What_JS_can_do?">
+              <header>What JS can do?</header>
+              <article>
+                  <p>
+                      JavaScript is a text-based programming language used both on the client-side and server-side that allows you to make web pages interactive.
+                  </p>
+                  <ul>
+                    <li>
+                      What is even more exciting however is the functionality built on top of the client-side JavaScript language. So-called 
+                      Application Programming Interfaces (APIs) provide you with extra superpowers to use in your JavaScript code.APIs are ready-made sets of 
+                      code building blocks that allow a developer to implement programs that would otherwise be hard or impossible to implement.
+                    </li>
+                    <p class="note note notecard">
+                    <strong>Browser APIs</strong> are built into your web browser, and are able to expose data from the surrounding computer environment, or do useful complex things.
+                    <strong>Third party APIs</strong> are not built into the browser by default, and you generally have to grab their code and information from somewhere on the Web.
+                  </p></ul>
+              </article>
+          </section>
+          
+          <section class="main-section" id="Is_JS_on_your_page!?">
+            <header>Is JS on your page!?</header>
+            <article>
+              <ul>
+                <li>Here we are actually looking at some code, and while doing so, 
+                  explore what actually happens when you run some JavaScript in your page.</li>
+                  <li>
+                    When you load a web page in your browser, you are running your code (the <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML" target="_blank">HTML</a>, 
+                    <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS" target="_blank">CSS</a>, and JavaScript) 
+                    inside an execution environment (the browser tab). This is like a factory that takes in raw materials 
+                    (the code) and outputs a product (the web page).A very common use of JavaScript is to dynamically modify HTML and CSS to update a user interface, 
+                    via the Document Object Model API.
+                  </li>
+              </ul>
+            </article>
+          </section>
+
+          <section class="main-section" id=">Java_and_JavaScript">
+              <header>Java and JavaScript</header>
+              <article>
+                  <p>
+                      JavaScript and Java are similar in some ways but fundamentally different
+                in some others. The JavaScript language resembles Java but does not have
+                Java's static typing and strong type checking. JavaScript follows most
+                Java expression syntax, naming conventions and basic control-flow
+                constructs which was the reason why it was renamed from LiveScript to
+                JavaScript.
+                  </p>
+
+                  <p>
+                      In contrast to Java's compile-time system of classes built by
+                      declarations, JavaScript supports a runtime system based on a small
+                      number of data types representing numeric, Boolean, and string values.
+                      JavaScript has a prototype-based object model instead of the more common
+                      class-based object model. The prototype-based model provides dynamic
+                      inheritance; that is, what is inherited can vary for individual objects.
+                      JavaScript also supports functions without any special declarative
+                      requirements. Functions can be properties of objects, executing as
+                      loosely typed methods.
+                    </p>
+
+                    <p>
+                      JavaScript is a very free-form language compared to Java. You do not
+                      have to declare all variables, classes, and methods. You do not have to
+                      be concerned with whether methods are public, private, or protected, and
+                      you do not have to implement interfaces. Variables, parameters, and
+                      function return types are not explicitly typed.
+                    </p>
+
+                  <p>Both "Java" and "JavaScript" are trademarks or registered trademarks of Oracle in the U.S. 
+                    and other countries. However, the two programming languages have very different syntax, semantic, and use.</p>
+              </article>
+          </section>
+          <section class="main-section" id="Hello_world!">
+              <header>Hello world!</header>
+              <article>
+                  <p>
+                  First, let me tell you why we code "helloworld".
+                  Traditionally, Hello World programs are used to illustrate 
+                  how the process of coding works, as well as to ensure that 
+                  a language or system is operating correctly.They are usually 
+                  the first programs that new coders learn, because even those 
+                  with little or no experience can execute Hello World both 
+                  easily and correctly.
+                  </p>
+                  
+                      Now,open the Scratchpad and write your
+                      first "Hello world" JavaScript code:
+                      <code>funtion greetMe(yourName) { alert("Hello " + yourName); }
+                          greetMe("World");
+                      </code>
+                      Select the code in the pad and hit Ctrl+R to watch it unfold in your
+                      browser!
+                  
+              </article>
+          </section>
+          <section class="main-section" id="Variables">
+              <header>Variables</header>
+              <article>
+                <p>
+                  We use variables as symbolic names for values in your application. The
+                  names of variables, called identifiers, conform to certain rules.
+                </p>
+                <p>
+                  A JavaScript identifier must start with a letter, underscore (_), or
+                  dollar sign ($); subsequent characters can also be digits (0-9). Because
+                  JavaScript is case sensitive, letters include the characters "A" through
+                  "Z" (uppercase) and the characters "a" through "z" (lowercase).
+                </p>
+                <p>
+                  You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers.
+                  You can also use the Unicode escape sequences as characters in
+                  identifiers. Some examples of legal names are Number_hits, temp99, and
+                  _name.
+                </p>
+              </article>
+            </section>
+            <section class="main-section" id="Declaring_variables">
+              <header>Declaring variables</header>
+              <article>
+                You can declare a variable in three ways:
+                <p>
+                  <code>let</code>,<code>const</code>,<code>var</code>
+                </p>
+                <p>Variable - For every iteration the value of the next property is assigned to the variable.</p>
+                <p>iterable - An object that has iterable properties.</p>
+                <p>
+                  Example using <code>var</code>, <code>var x = 42.</code> This syntax can be used to declare both 
+                  local and global variables.
+                </p>
+                <p>
+                  Example using <code>let</code>,<code> let y = 13.</code> This syntax
+                  can be used to declare a block scope local variable. See Variable scope
+                  below.
+                  Variables defined with <code>const</code> behave like <code>let</code> variables, except they cannot be reassigned.
+                </p>
+                <p>
+                  By simply assigning it a value. For example, <code>x = 42.</code> This
+                  always declares a global variable. It generates a strict JavaScript
+                  warning. You shouldn't use this variant.
+                </p>
+              </article>
+            </section>
+            <section class="main-section" id="Variable_scope">
+              <header>Variable scope</header>
+              <article>
+                <p>
+                  When you declare a variable outside of any function, it is called a
+                  global variable, because it is available to any other code in the
+                  current document. When you declare a variable within a function, it is
+                  called a local variable, because it is available only within that
+                  function.
+                </p>
+    
+                <p>
+                  JavaScript before ECMAScript 2015 does not have block statement scope;
+                  rather, a variable declared within a block is local to the function (or
+                  global scope) that the block resides within. For example the following
+                  code will log 5, because the scope of x is the function (or global
+                  context) within which x is declared, not the block, which in this case
+                  is an if statement.
+                </p>
+                <code>if (true) { var x = 5; } console.log(x); // 5</code>
+                <p>
+                  This behavior changes, when using the let declaration introduced in
+                  ECMAScript 2015.
+                </p>
+    
+                <code>if (true) { let y = 5; } console.log(y); // ReferenceError: y is not
+                  defined</code>
+                  <p><i>JavaScript's global scope is like a public toilet. You can't avoid going in there, but try to limit your contact with surfaces when you do.
+                    ~Dmitry Baranovskiy</i></p>
+              </article>
+            </section>
+            <section class="main-section" id="Hoisting_and_Recursion">
+              <header>Hoisting and Recursion</header>
+              <article>
+                <p class="note note notecard">
+                  <strong>Hoisting:</strong> Hoisting in JavaScript is a behavior 
+                    in which a function or a variable can be used before declaration.In hoisting, 
+                    though it seems that the declaration has moved up in the program, the actual thing 
+                    that happens is that the function and variable declarations are added to memory 
+                    during the compile phase.
+                </p>
+                <ul>
+                  <li>
+                    <u>Variable Hoisting</u>:
+                    In terms of variables and constants, keyword <code>var</code> is hoisted and <code>let</code> and <code>const</code> does not allow hoisting.
+                    In hoisting, the variable declaration is only accessible to the immediate scope.
+                  </li>
+                  <li>
+                    <u>Function Hoisting</u>:
+                    A function can be called before declaring it.However, when a function is used as an expression, 
+                    an error occurs because only declarations are hoisted.
+                  </li>
+                </ul>
+                <p class="note note notecard">
+                  <strong>Note: </strong>Generally, hoisting is not performed in other programming languages like Python, C, C++, Java.
+                  Hoisting can cause undesirable outcomes in your program. And it is best to declare variables and functions first 
+                  before using them and avoid hoisting.
+                  In the case of variables, it is better to use <code>let</code> than <code>var</code>.
+                </p>
+                <p>
+                  <strong>Recursion: </strong>Recursion is a process of calling itself. A function that calls itself is called a recursive function.
+                  </p>
+                  <ul>
+                    <li>A recursive function must have a condition to stop calling itself. Otherwise, the function is called indefinitely.</li>
+                    <li>Once the condition is met, the function stops calling itself. This is called a base condition.</li>
+                    <li>To prevent infinite recursion, you can use if...else statement (or similar approach) where one branch makes the recursive call, and the other doesn't.</li>
+                  </ul>
+              </article>
+            </section>
+            <section class="main-section" id="Constants">
+              <header>Constants</header>
+              <article>
+                <p>
+                  You can create a read-only, named constant with the const keyword. The
+                  syntax of a constant identifier is the same as for a variable
+                  identifier: it must start with a letter, underscore or dollar sign and
+                  can contain alphabetic, numeric, or underscore characters.
+                </p>
+    
+                <code>const PI = 3.14;</code>
+                <p>
+                  A constant cannot change value through assignment or be re-declared
+                  while the script is running. It has to be initialized to a value.
+                </p>
+    
+                <p>
+                  The scope rules for constants are the same as those for let block scope
+                  variables. If the const keyword is omitted, the identifier is assumed to
+                  represent a variable.
+                </p>
+    
+                <p>
+                  You cannot declare a constant with the same name as a function or
+                  variable in the same scope. For example:
+                </p>
+    
+                <code>// THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS WILL
+                  CAUSE AN ERROR ALSO function f() { const g = 5; var g; //statements
+                  }</code>
+                However, object attributes are not protected, so the following statement
+                is executed without problems.
+                <code>const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = "otherValue";</code>
+              </article>
+            </section>
+            <section class="main-section" id="Data_types">
+              <header>Data types</header>
+              <article>
+                <p>There are eight basic data types in JavaScript. They are:</p>
+                <ul>
+                      <li><code>String</code> represents textual data</li>
+                      <li><code>Number</code> an integer or a floating-point number.</li>
+                      <li><code>BigInt</code> an integer with arbitary precision.</li>
+                      <li><code>Boolean</code> Any of two values: true or false.</li>
+                      <li><code>undefined</code> a data type whose variable is not initialized.</li>
+                      <li><code>null</code>denotes a <code>null</code>value.</li>
+                      <li><code>Symbol</code> data type whose instances are unique and immutable.</li>
+                      <li><code>Object</code>key-value pairs of collection of data</li>
+                </ul>
+                Here, all data types except <code>Object</code> are primitive data types, 
+                whereas <code>Object</code> is non-primitive.
+                <p class="note note notecard">
+                  <strong>Note: </strong>The <code>Object</code> data type (non-primitive type) can store 
+                  collections of data, whereas primitive data type can only store a single data.
+                </p>
+                Although these data types are a relatively small amount, they enable you
+                to perform useful functions with your applications. Objects and functions
+                are the other fundamental elements in the language. You can think of
+                objects as named containers for values, and functions as procedures that 
+                your application can perform.
+                
+              </article>
+            </section>
+            <section class="main-section" id="if...else_statement">
+              <header>if...else statement</header>
+              <article>
+                Use the if statement to execute a statement if a logical condition is
+                true. Use the optional else clause to execute a statement if the condition
+                is false. An if statement looks as follows:
+    
+                <code>if (condition) { statement_1; } else { statement_2; }</code>
+                condition can be any expression that evaluates to true or false. See
+                Boolean for an explanation of what evaluates to true and false. If
+                condition evaluates to true, statement_1 is executed; otherwise,
+                statement_2 is executed. statement_1 and statement_2 can be any statement,
+                including further nested if statements.
+                <p>
+                  You may also compound the statements using else if to have multiple
+                  conditions tested in sequence, as follows:
+                </p>
+                <code>if (condition_1) { statement_1; } else if (condition_2) { statement_2;
+                  } else if (condition_n) { statement_n; } else { statement_last; }
+                </code>
+                In the case of multiple conditions only the first logical condition which
+                evaluates to true will be executed. To execute multiple statements, group
+                them within a block statement ({ ... }) . In general, it's good practice
+                to always use block statements, especially when nesting if statements:
+    
+                <code>if (condition) { statement_1_runs_if_condition_is_true;
+                  statement_2_runs_if_condition_is_true; } else {
+                  statement_3_runs_if_condition_is_false;
+                  statement_4_runs_if_condition_is_false; }</code>
+                It is advisable to not use simple assignments in a conditional expression,
+                because the assignment can be confused with equality when glancing over
+                the code. For example, do not use the following code:
+                <code>if (x = y) { /* statements here */ }</code> If you need to use an
+                assignment in a conditional expression, a common practice is to put
+                additional parentheses around the assignment. For example:
+    
+                <code>if ((x = y)) { /* statements here */ }</code>
+              </article>
+            </section>
+
+            <section class="main-section" id="while_statement">
+              <header>while statement</header>
+              <article>
+                A while statement executes its statements as long as a specified condition
+                evaluates to true. A while statement looks as follows:
+    
+                <code>while (condition) statement</code> If the condition becomes false,
+                statement within the loop stops executing and control passes to the
+                statement following the loop.
+    
+                <p>
+                  The condition test occurs before statement in the loop is executed. If
+                  the condition returns true, statement is executed and the condition is
+                  tested again. If the condition returns false, execution stops and
+                  control is passed to the statement following while.
+                </p>
+    
+                <p>
+                  To execute multiple statements, use a block statement ({ ... }) to group
+                  those statements.
+                </p>
+    
+                Example:
+    
+                <p>The following while loop iterates as long as n is less than three:</p>
+    
+                <code>var n = 0; var x = 0; while (n &lt; 3) { n++; x += n; }</code>
+                <p>
+                  With each iteration, the loop increments n and adds that value to x.
+                  Therefore, x and n take on the following values:
+                </p>
+    
+                <ul>
+                  <li>After the first pass: n = 1 and x = 1</li>
+                  <li>After the second pass: n = 2 and x = 3</li>
+                  <li>After the third pass: n = 3 and x = 6</li>
+                </ul>
+                <p>
+                  After completing the third pass, the condition n &lt; 3 is no longer
+                  true, so the loop terminates.
+                </p>
+              </article>
+            </section>
+
+            <section class="main-section" id="Function_declarations">
+              <header>Function declarations</header>
+              <article>
+                A function definition (also called a function declaration, or function
+                statement) consists of the function keyword, followed by:
+    
+                <ul>
+                  <li>The name of the function.</li>
+                  <li>
+                    A list of arguments to the function, enclosed in parentheses and
+                    separated by commas.
+                  </li>
+                  <li>
+                    The JavaScript statements that define the function, enclosed in curly
+                    brackets, { }.
+                  </li>
+                </ul>
+                <p>
+                  For example, the following code defines a simple function named square:
+                </p>
+    
+                <code>function square(number) { return number * number; }</code>
+                <p>
+                  The function square takes one argument, called number. The function
+                  consists of one statement that says to return the argument of the
+                  function (that is, number) multiplied by itself. The return statement
+                  specifies the value returned by the function.
+                </p>
+                <code>return number * number;</code>
+                <p>
+                  Primitive parameters (such as a number) are passed to functions by
+                  value; the value is passed to the function, but if the function changes
+                  the value of the parameter, this change is not reflected globally or in
+                  the calling function.
+                </p>
+              </article>
+            </section>
+
+            <section class="main-section" id="JS_Math">
+              <header>JS Math</header>
+              <article>
+                <code>Math</code> is a built-in object that has properties and methods for mathematical constants and functions. 
+                It’s not a function object.
+                Math works with the Number type. It doesn't work with BigInt.
+                <ul>
+                  <li>
+                    Unlike many other global objects, Math is not a constructor. All properties and methods of Math are static. 
+                    You refer to the constant pi as Math.PI and you call the sine function as Math.sin(x), where x is the method’s argument. 
+                    Constants are defined with the full precision of real numbers in JavaScript.
+                  </li>
+                  <p class="note notecard">
+                    <strong>Note: </strong>Many <code>Math</code> functions have a precision that’s implementation-dependent.
+                    This means that different browsers can give a different result. 
+                    Even the same JavaScript engine on a different OS or architecture can give different results!</p>
+                </ul>
+                <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math" target="_blank">click this to know more about JS Math.</a></p>
+              </article>
+            </section>
+
+            <section class="main-section" id="Loops">
+              <header>Loops</header>
+              <article>
+                Loops are handy, if you want to run the same code over and over again, 
+                each time with a different value.<strong> Loops are all to do with doing the same thing over and over again</strong>, 
+                which is great for <strong>rapidly completing repetitive tasks</strong>.They generally have one or more following features:
+                <ul>
+                  <li>A <strong>counter</strong>, which is initialized with a certain value — this is the starting point of the loop.</li>
+                  <li>A <strong>condition</strong>, which is a true/false test to determine whether the loop continues to run, or stops — usually when the counter reaches a certain value.</li>
+                  <li>An <strong>iterator</strong>, which increments the counter by a small amount on each successive loop until the condition is no longer <code>true</code>.</li>
+                  <li>JavaScript supports different kinds of loops:</li>
+                  <li>
+                  <code>for</code>-loops through a block of code a number of times.
+                  </li>
+                  <li>
+                  <code>for/in</code>-loops through the properties of an object.  
+                  </li>
+                  <li>
+                  <code>for/of</code>-loops through the values of an iterable object.  
+                  </li>
+                  <li>
+                  <code>while</code>-loops through a block of code while a specified condition is true.
+                  </li>
+                  <li>
+                  <code>do/while</code>-also loops through a block of code while a specified condition is true.  
+                  </li>
+              </ul>
+              </article>
+            </section>
+            <section class="main-section" id="Break_and_Continue">
+              <header>Break and Continue Statements</header>
+              <article>
+              <ul>
+                <li>The <code>break</code> statement "<i>jumps out</i>" of a loop.</li>
+                <li>The <code>continue</code> statement "<i>jumps over</i>" one iteration in the loop.</li>
+              </ul>
+            </article>
+            </section>
+
+            <section class="main-section" id="RegExp_Object">
+              <header>Regular Expression Object</header>
+              <article>
+                <ul>
+                  <li>A regular expression is a sequence of characters that forms a search pattern.</li>
+                  <li>The search pattern can be used for text search and text replace operations.</li>
+                  <li>Regular expressions can be used to perform all types of text search and text replace operations.</li>
+                  <li><strong>Syntax:</strong><code> /pattern/modifiers;</code></li>
+                  <li>Example:</li>
+                  <li><code>var</code> patt = /sairamnomula/i;</li>
+                  <li>Here, <strong>/sairamnomula/i</strong> is a regular expression. <strong>sairamnomula</strong> is a pattern (to be used in a search).
+                    <strong>i</strong> is a modifier (modifies the search to be case-insensitive).</li>
+                </ul>
+              </article>
+            </section>
+            <section class="main-section" id="Js_Errors">
+              <header>Js Errors</header>
+              <article>
+                <h4>Errors will happen!</h4>
+                <ul>
+                  <li><h4>Types of Errors:</h4></li>
+                  <li>In programming, there can be two types of errors in the code:</li>
+                  <li><u>Syntax Error</u>: Error in the syntax. For example, if you write consol.log('your result');, the above program throws a syntax error. The spelling of console is a mistake in the above code.</li>
+                  <li><u>Runtime Error</u>: This type of error occurs during the execution of the program. For example,
+                    calling an invalid function or a variable.</li>
+                  <li>
+                The <code>try</code>, <code>catch</code>, <code>throw</code> and <code>finally</code> blocks are used to handle exceptions (a type of an error). 
+                Before you learn about them, you need to know about the types of errors in programming.
+                 </li>
+                 <li>
+                  The <code>try</code> statement lets you test a block of code for errors.
+                 </li>
+                 <li>
+                  The <code>catch</code> statement lets you handle the error.
+                 </li>
+                 <li>
+                  The <code>throw</code> statement lets you create custom errors.
+                 </li>
+                 <li>
+                  The <code>finally</code> statement lets you execute code, after try and catch, regardless of the result.
+                 </li>
+            </ul></article> 
+          </section>
+            <section class="main-section" id="JSON">
+            <header>JSON</header>
+            <article>
+              <ul>
+                <li>JSON stands for <strong>J</strong>ava<strong>S</strong>cript <strong>O</strong>bject <strong>N</strong>otation</li>
+                <li>JSON is a format for storing and transporting data.</li>
+                <li>JSON is often used when data is sent from a server to a web page.</li>
+                <li>JSON is a lightweight data interchange format.</li>
+                <li>JSON is language independent.</li>
+                <li>JSON is "self-describing" and easy to understand.</li>
+                <li>The JSON syntax is derived from JavaScript object notation syntax, but the JSON format is text only. Code for reading and generating 
+                  JSON data can be written in any programming language.</li>
+              </ul>
+            </article></section>
+            <section class="main-section" id="Inheritance_and_the_prototype_chain">
+              <header>Inheritance and the prototype chain</header>
+              <article>
+                <ul>
+                  <li>
+                    JavaScript is a bit confusing for developers experienced in class-based languages (like Java or C++), 
+                    as it is dynamic and does not provide a <code>class</code> implementation.
+                  </li>
+                  <li>
+                    When it comes to inheritance, JavaScript only has one construct: objects. Each object has a private property which holds 
+                    a link to another object called its prototype. That prototype object has a prototype of its own, and so on until an object 
+                    is reached with <code>null</code> as its prototype. By definition, <code>null</code> has no prototype, and acts 
+                    as the final link in this prototype chain.
+                  </li>
+                  <li><h3>Inheritance with the prototype chain</h3></li>
+                  <li><strong><u>Inherting properties</u>:</strong></li>
+                  <li>JavaScript objects are dynamic "bags" of properties (referred to as own properties). JavaScript objects have a link to a prototype object. 
+                    When trying to access a property of an object, the property will not only be sought on the object but on the prototype of the object, 
+                    the prototype of the prototype, and so on until either a property with a matching name is found or the end of the prototype chain is reached.
+                  </li>
+                  <p class="note notecard">
+                    <strong>Note:</strong>Following the ECMAScript standard, the notation <code>someObject.[[Prototype]]</code> is used to designate the prototype of <code>someObject</code>. 
+                    Since ECMAScript 2015, the <code>[[Prototype]]</code> is accessed using the accessors <code>Object.getPrototypeOf()</code> and <code>Object.setPrototypeOf()</code>. 
+                    This is equivalent to the JavaScript property <code>__proto__</code> which is non-standard but de-facto implemented by many browsers.
+                    It should not be confused with the <code>func.prototype</code> property of functions, which instead specifies the <code>[[Prototype]]</code> to be assigned to all instances 
+                    of objects created by the given function when used as a constructor. The Object.prototype property represents the Object prototype object.</p>
+                    <p>
+                      Setting a property to an object creates an own property. The only exception to the getting and setting behavior rules is when there is an inherited property with a 
+                      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters" target="_blank">getter or a setter.</a>
+                    </p>
+                </ul>
+              </article>
+            </section>
+
+            <section class="main-section" Id="Strict_mode">
+              <header>Strict mode</header>
+              <article>
+                  <p>
+                    Strict mode isn't just a subset: it intentionally has different semantics from normal code. 
+                    Browsers not supporting strict mode will run strict mode code with different behavior from browsers that do, 
+                    so don't rely on strict mode without feature-testing for support for the relevant aspects of strict mode.
+                  </p>
+                  <ul>
+                    <li>Strict mode makes several changes to normal JavaScript semantics:</li>
+                    <li>1) Eliminates some JavaScript silent errors by changing them to throw errors.</li>
+                    <li>2) Fixes mistakes that make it difficult for JavaScript engines to perform optimizations: 
+                      strict mode code can sometimes be made to run faster than identical code that's not strict mode.</li>
+                    <li>3) Prohibits some syntax likely to be defined in future versions of ECMAScript.</li>
+                    <li><h4>Invoking Strict Mode:</h4></li>
+                    <li>Strict mode applies to entire scripts or to individual functions. 
+                      It doesn't apply to block statements enclosed in <code>{}</code> braces; attempting to apply it to such contexts does nothing. 
+                      <code>eval</code> code, <code>Function</code> code, event handler attributes, strings passed to <code>WindowTimers.setTimeout()</code>, 
+                      and related functions are entire scripts, and invoking strict mode in them works as expected.</li>
+                      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode" target="_blank">Know more about Strict mode</a></li>
+                      <p class="note notecard">
+                        <strong>Note:</strong> Sometimes you'll see the default, non-strict mode referred to as "sloppy mode". This isn't an official term, but be aware of it, just in case.
+                      </p>
+                </ul>
+              </article>
+            </section>
+
+            <section class="main-section" Id="JavaScript_typed_arrays">
+              <header>JavaScript typed arrays</header>
+              <article>
+                <p>JavaScript typed arrays are array-like objects that provide a mechanism for reading and writing raw binary data in memory buffers.
+                  This feature is well supported across all major browsers and with ES6, they were integrated into the core JS framework and received 
+                  access to <code>Array</code> methods such as <code>map()</code>, <code>filter()</code>, etc.</p>
+                <ul>
+                  <li><strong>Structure:</strong> Typed Arrays are implemented in such a way that they are structured as two main components. 
+                    The two components that work hand-in-hand to implement typed arrays are the Buffer and View.</li>
+                  <li><strong>Buffer:</strong> A Buffer is an object that is of type <code>ArrayBuffer</code> which represents a chunk of data. 
+                    This chunk of raw binary data, cannot be accessed or modified on its own. You might wonder, what is the use of a data 
+                    object which cannot be accessed or modified. Here is where a View comes into the picture.</li>
+                  <li><strong>View:</strong> A View is an object that allows you to access and modify the raw binary content stored in an ArrayBuffer.</li>
+                  <li>There are two kinds of Views:</li>
+                  <li><strong><u>An instance of the <code>TypedArray</code> object</u>:</strong> These types of objects are much similar to the usual Arrays, 
+                    but only store numerical data of a single type. Types like Int8, Uint8, Int16, Float32 are some of the TypedArray types. 
+                    The number in the type denotes the number of bits allocated for the data type.</li>
+                    <li><strong><u>An instance of the <code>DataView</code> object</u>:</strong> The <code>DataView</code> is a low-level interface that provides a getter/setter 
+                      API to read and write arbitrary data to the buffer. This helps you immensely, especially when working with multiple data types in a single <code>TypedArray</code>.</li>
+                      <li>Another advantage of using the <code>DataView</code> is that it lets you control the Endianness of your data. <code>Typed Array</code> use the Endianness of your platform. 
+                        This will not be an issue if you are working locally, as your device will use the same Endianness as your typed array. In most scenarios, your typed array will be little-endian as Intel uses little-endian. 
+                        Since Intel is very common amongst computer processors, there will not be an issue most of the time. But if you are transferring a little-endian encoded data to a device that uses big-endian encoding, 
+                        you will end up with poorly encoded that will probably end up being corrupted. As <code>DataView</code> enables you to control the Endianness, you can use it whenever necessary.</li>
+                  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays" target="_blank">Know more about Typed Arrays.</a></li>
+                </ul>
+              </article>
+            </section>
+            <section class="main-section" Id="Memory_management">
+              <header>Memory Management</header>
+              <article>
+                <p>Low-level languages like C, have manual memory management primitives such as <a href="https://www.geeksforgeeks.org/dynamic-memory-allocation-in-c-using-malloc-calloc-free-and-realloc/" target="_blank">malloc() and free().</a>
+                  In contrast, JavaScript automatically allocates memory when objects are created and frees it when they are not used anymore (garbage collection).</p>
+                <ul><li>At the same time, JavaScript allocates memory when things (objects, strings, etc.) are created and “automatically” frees it up when they are not used anymore, 
+                  a process called garbage collection.This seemingly “automatical” nature of freeing up resources is a source of confusion and gives JavaScript (and other high-level-language) developers the false impression 
+                  they can choose not to care about memory management. This is a big mistake.</li>
+                  <li>Even when working with high-level languages, developers should have an understanding of memory management (or at least the basics). Sometimes there are issues with the automatic memory management 
+                    (such as bugs or implementation limitations in the garbage collectors, etc.) which developers have to understand in order to handle them properly (or to find a proper workaround, with a minimum trade off and code debt).</li>
+                    <li>No matter what language you are using, memory life cycle is pretty much always the same.(Allocate -> Use -> Release)</li>
+                    <li><strong>Allocate memory--</strong>memory is allocated by the operating system which allows your program to use it.</li>
+                    <li>In low-level languages (e.g. C) this is an explicit operation that you as a developer should handle.</li>
+                    <li>In high-level languages, however, this is taken care of for you.</li>
+                    <li><strong>Use memory--</strong>this is the time when your program actually makes use of the previously allocated memory. <strong>Read</strong> and <strong>Write</strong> operations are taking place as you’re using the allocated variables in your code.</li>
+                    <li><strong>Release memory--</strong>ow is the time to release the entire memory that you don’t need so that it can become free and available again. As with the Allocate memory operation, this one is explicit in low-level languages.</li>
+                    <!-- <img src="https://miro.medium.com/max/30/1*qY-yRQWGI-DLS3zRHYHm9A.png?q=20" width="1024" height="430" role="presentation"> -->
+                    <li><h4>Allocation in JavaScript:</h4><u>Value initialization</u>: JavaScript relieves developers from the responsibility to handle memory allocations — JavaScript does it by itself, alongside declaring values.</li>
+                    <!--<div class="code-example">
+                    <pre class="brush: js notranslate">
+                      <code><span class="token keyword">var</span> x 
+                      <span class="token operator">=</span> 
+                      <span class="token punctuation">{</span>
+                      a
+                      <span class="token operator">:</span> 
+                      <span class="token punctuation">{</span>
+                      b<span class="token operator">:</span> <span class="token number">2</span>
+                      <span class="token punctuation">}</span>
+                      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+                      <span class="token comment">// 2 objects are created. One is referenced by the other as one of its properties.</span>
+                      <span class="token comment">// The other is referenced by virtue of being assigned to the 'x' variable.</span>
+                      <span class="token comment">// Obviously, none can be garbage-collected.</span>
+                      <span class="token keyword">var</span> y <span class="token operator">=</span> x
+                      <span class="token punctuation">;</span>      
+                      <span class="token comment">// The 'y' variable is the second thing that has a reference to the object.</span>
+                      x <span class="token operator">=</span> 
+                      <span class="token number">1</span>
+                      <span class="token punctuation">;</span>          
+                      <span class="token comment">// Now, the object that was originally in 'x' has a unique reference</span>
+                      <span class="token comment">//   embodied by the 'y' variable.</span>
+                      <span class="token keyword">var</span> z <span class="token operator">=</span> y<span class="token punctuation">.</span>a<span class="token punctuation">;</span>    <span class="token comment">// Reference to 'a' property of the object.</span>
+                      <span class="token comment">//   This object now has 2 references: one as a property,</span>
+                      <span class="token comment">//   the other as the 'z' variable.</span>
+                      y 
+                      <span class="token operator">=</span> 
+                      <span class="token string">'mozilla'</span><span class="token punctuation">;</span>  
+                      <span class="token comment">// The object that was originally in 'x' has now zero</span>
+                      <span class="token comment">//   references to it. It can be garbage-collected.</span>
+                      <span class="token comment">//   However its 'a' property is still referenced by</span>
+                      <span class="token comment">//   the 'z' variable, so it cannot be freed.</span>
+                      z 
+                      <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>       
+                      <span class="token comment">// The 'a' property of the object originally in x</span>
+                      <span class="token comment">//   has zero references to it. It can be garbage collected.</span>
+                      </code></pre>
+                    </div>-->
+                    <li><u>Allocation via function cells</u>: Some function calls result in object allocation and Some methods allocate new values or objects.</li>
+                    <li><strong>Using memory in JavaScript</strong>: Using the allocated memory in JavaScript basically, means reading and writing in it.
+                      This can be done by reading or writing the value of a variable or an object property or even passing an argument to a function.
+                      Release when the memory is not needed anymore.The hardest task here is to figure out when the allocated memory is not needed any longer. 
+                      It often requires the developer to determine where in the program such piece of memory is not needed anymore and free it.High-level languages 
+                      embed a piece of software called garbage collector which job is to track memory allocation and use in order to find when a piece of allocated 
+                      memory is not needed any longer in which case, it will automatically free it.</li>
+                      <li>Most garbage collectors work by collecting memory which can no longer be accessed, e.g. all variables pointing to it went out of scope. 
+                        That’s, however, an under-approximation of the set of memory spaces that can be collected, because at any point a memory location may still 
+                        have a variable pointing to it in scope, yet it will never be accessed again.</li>
+                        <li><h3>Garbage collection:</h3>Due to the fact that finding whether some memory is “not needed anymore” is undecidable, garbage collections 
+                          implement a restriction of a solution to the general problem.</li>
+                          <li><h4>Reference:</h4>The main concept that garbage collection algorithms rely on is the concept of reference. Within the context of memory management, 
+                            an object is said to reference another object if the former has access to the latter (either implicitly or explicitly). For instance, a JavaScript 
+                            object has a reference to its <a href="#Inheritance_and_the_prototype_chain">prototype</a> (implicit reference) and to its properties values (explicit reference).
+                            In this context, the notion of an "object" is extended to something broader than regular JavaScript objects and also contain function scopes (or the global lexical scope).</li>
+                            <li><h4>Reference-counting garbage collection:</h4>This is the most naive garbage collection algorithm. This algorithm reduces the problem from determining whether or not an object 
+                              is still needed to determining if an object still has any other objects referencing it. An object is said to be "garbage", or collectible if there are zero references pointing to it.</li>
+                              <li><h4>Limitation-Circular references:</h4>There is a limitation when it comes to circular references. In the following example, two objects are created with properties that reference 
+                                one another, thus creating a cycle. They will go out of scope after the function call has completed. At that point they become unneeded and their allocated memory should be reclaimed. 
+                                However, the reference-counting algorithm will not consider them reclaimable since each of the two objects has at least one reference pointing to them, resulting in neither of them 
+                                being marked for garbage collection. Circular references are a common cause of memory leaks.</li>
+                                <li><h4>Mark-and-sweep algorithm:</h4> In order to decide whether an object is needed, this algorithm determines whether the object is reachable.</li>
+                                <li><a href="https://www.geeksforgeeks.org/mark-and-sweep-garbage-collection-algorithm/">know more about it!</a></li>
+                                <li><h4>Counter intuitive behavior of Garbage Collectors</h4>You can’t really tell when a collection will be performed. This means that in some cases 
+                                  programs use more memory that it’s actually required. In other cases, short-pauses may be noticeable in particularly sensitive applications. 
+                                  Although non-determinism means one cannot be certain when a collection will be performed, most GC implementations share the common pattern of 
+                                  doing collection passes during allocation. If no allocations are performed, most GCs stay idle.</li>
+                </ul>
+              </article>
+            </section>
+            <section class="main-section" Id="Concurrency_model_and_Event_Loop">
+              <header>Concurrency model and Event Loop</header>
+              <article>
+              <p>Javascript runtime is single threaded which means that it can execute one piece of code at a time.
+                JavaScript has a concurrency model based on an event loop, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks. 
+                This model is quite different from models in other languages like C and Java.The following sections explain a theoretical model. Modern JavaScript engines implement and heavily optimize the described semantics.
+              </p>
+              <ul>
+                <li><strong>Call Stack:</strong> A call stack is a simple data structure that records where in the code we are currently. So if we step into a function that is a function invocation it is pushed to the call stack. 
+                  When we return from a function it is popped out of the stack.</li>
+                  <li><strong>Browser:</strong> Now we know from this that Javascript can execute one thing at a time but that’s not the case with the Browser. The Browser has its own set of APIs like setTimeout and XMLHttpRequests 
+                    which are not specified in the Javascript runtime.In fact if you look through the source code of V8, the popular Javascript runtime that powers browsers like Google Chrome, you won’t find any definitions for it. 
+                    That's because these special web API’s exist in the browser environment not inside the javascript environment. So you can say that these APIs introduce concurrency into the mix.</li>
+                    <li><strong>Heap:</strong> It’s mostly the place where objects are allocated.</li>
+                    <li><strong>Call back Queue:</strong> It’s a data structure that stores all the callbacks. Since it’s a queue, the elements are processed based on First in First Out(FIFO).At some point during the event loop, 
+                      the runtime starts handling the messages on the queue, starting with the oldest one. To do so, the message is removed from the queue and its corresponding function is called with the message as an input parameter. 
+                      As always, calling a function creates a new stack frame for that function's use.The processing of functions continues until the stack is once again empty. Then, the event loop will process the next message in 
+                      the queue (if there is one).</li>
+                      <li><strong>Event loop:</strong> The main function of event loop is to check the program stack and find if it is empty. If the stack is empty, then it checks the callback queue. If the callback queue is not empty 
+                        then it pushes the code block from callback queue to main stack and executes it sequentially.</li>
+                        <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--me_OQkyK--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/vtk5e1vsf0k09jl8ns7n.png" height="500" width="600" alt="Alt Text" loading="lazy">
+                        <!--<img src="Eventloop.png" height="500" width="600" alt="Alt Text" loading="lazy">-->
+                        <li style="color:red;">Hey stop! I heard someone yelling what the heck is this!? Okay, let's watch a video! <a href="https://www.youtube.com/watch?v=8aGhZQkoFbQ&t=1s" target="_blank">Click here!</a></li>
+                        <p>Now lets try to understand what is happening when the above program is getting executed.</p>
+                        <ol>
+                          <li>1. The program execution starts. Since Javascript is single threaded only 1 line can be executed at a time.</li>
+                          <li>2. So, First line of code is pushed onto stack.</li>
+                          <li>3. The console.log is executed printing "Hello". So this line is now popped out of stack.</li>
+                          <li>4. Now next line to be executed is setTimeout and it gets pushed onto stack. Now the javascript runtime can only execute single statement but the browser comes with a whole lot of other things which are web apis. 
+                            This is when concurrency comes into picture. Now on the execution of setTimeout, a call to setTimeout api is made and the setTimeout is now popped of from stack.</li>
+                          <li>5. The third statement is pushed onto stack and then executed. This prints "Bye" as output.</li>
+                          <li>6. Now when the setTimeout api ( and all other apis ) are completed, the callback is pushed into callback queue simultaneously. These apis cannot interact directly with the stack.</li>
+                          <li>7. Now is the time when event loop comes into picture. Event loops jobs is to monitor call stack and task queue. If the call stack is empty, it has to take the first thing from the callback queue and push 
+                            it onto the stack. So now callback from the timeout is pushed onto the stack which then gets executed and prints "Hello inside setTimeout".</li>
+                        </ol>
+                        <p class="note notecard"> To visualize this better try this tool by Phillip Roberts:<a href="http://latentflip.com/loupe/?code=!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D" target="_blank">Loupe Event Loop Visualizer</a></p>
+                        <li><a href="https://html.spec.whatwg.org/multipage/webappapis.html#event-loops" target="_blank">Know about Event loops in the HTML standard</a></li>
+                        <li><a href="https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/#what-is-the-event-loop" target="_blank">Know about Node.js Event Loop</a></li>
+              </ul>
+              </article>
+            </section>
+
+            <section class="main-section" Id="Commonly_asked_JavaScript_Interview_Questions">
+              <header>JavaScript Interview Questions</header>
+              <article>
+                <p>Commonly asked JavaScript Interview Questions:</p>
+                <ul><p class="notecard2-0"><strong>
+                  1) What are the advantages of Javascript?
+                  <br />
+                  2) What are Imports and Exports in Javascript?
+                  <br />
+                  3) What is the difference between Undefined and Null in JavaScript?
+                  <br />
+                  4) What do you mean by scope of a variable in JavaScript?
+                  <br />
+                  5) What is the use of a constructor function in JavaScript?
+                  <br />
+                  6) Explain Implicit Type Coercion in JavaScript?
+                  <br />
+                  7) What is the difference between local storage & session storage?
+                  <br />
+                  8) Explain the difference between "==" and "===" operators.
+                  <br />
+                  9) Explain call(), apply(), bind() methods.
+                  <br />
+                  10) What is Hoisting ?
+                  <br />
+                  11) Is JavaScript a statically typed or a dynamically typed language ?
+                  <br />
+                  12) What is Temporal Dead Zone ?
+                  <br />
+                  13) What are Closures in JavaScript?
+                  <br />
+                  14) What are arrow functions in JavaScript? How are they different from normal functions?
+                  <br />
+                  15) What is the difference between getElementsById, querySelector or querySelectorAll?
+                  <br />
+                  16) What is OOP concept? How will you implement it in JavaScript?
+                  <br />
+                  17) What is strict mode in JavaScript?
+                  <br />
+                  18) What does async and defer attributes do? Why they are used in the script tag?
+                  <br />
+                  19) What is shift() and push? How they are differing from each other?
+                  <br />
+                  20) When is JavaScript synchronous? And when is asynchronous?
+                  <br />
+                  21) What is Ajax?
+                  <br />
+                  22) What is Call Stack in JavaScript?
+                  <br />
+                  23) What is the use of promises in javascript?
+                  <br />
+                  24) What is the rest parameter and spread operator?
+                  <br />
+                  25) Explain WeakSet in javascript.
+                  <br />
+                </strong></p></ul>
+              </article>
+            </section>
+
+          </main>
+        </div>
+    
+      </div>Made by Sairam Nomula
+      <script src="index.js"></script>
 </body>
 </html>
